@@ -44,7 +44,7 @@ object mijo{		// realizado
 }	
 }
 
-object canelones{ // sin terminar
+/* object canelones{ // sin terminar
 	var salsa = null
 	var queso = null
 	
@@ -58,5 +58,4 @@ object canelones{ // sin terminar
 		if (salsa) {return 5}
 		if (queso) {return 7}
 		if ( salsa && queso ) {return 12}
-	}
-}	
+	}*/
