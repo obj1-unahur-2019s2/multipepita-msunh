@@ -1,0 +1,17 @@
+import comidas.*
+import pepita.*
+
+test "hace lo que quieras" {
+	assert.that(pepita.estaDebil())
+	pepita.haceLoQueQuieras()
+	assert.equals(80,pepita.energia())
+	
+	pepita.comer(alpiste,150)
+	assert.equals(680,pepita.energia())
+
+	assert.that(pepita.estaFeliz())
+
+	pepita.haceLoQueQuieras()
+	assert.equals(662,pepita.energia())
+	
+}

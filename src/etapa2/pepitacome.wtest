@@ -1,10 +1,72 @@
-import pepita.pepita
-import comidas.mondongo
-import comidas.alpiste
+import pepita.*
+import comidas.*
+
 
 test "pepita come alpiste y mondongo" {
 	pepita.comer(alpiste, 100)
 	assert.equals(400, pepita.energia())
 	pepita.comer(mondongo, 50)
 	assert.equals(5400, pepita.energia())
+}
+
+test "pepita come mijo mojado"{
+	assert.equals(0, pepita.energia())
+	mijo.mojarse()
+	pepita.comer(mijo,10)
+	assert.equals(150, pepita.energia())
+}
+
+test "pepita come mijo seco"{
+	assert.equals(0, pepita.energia())
+	mijo.secarse()
+	pepita.comer(mijo,10)
+	assert.equals(200,pepita.energia())
+}
+
+test "come mijo seco despues de comer mijo mojado"{
+	assert.equals(0, pepita.energia())
+	mijo.mojarse()
+	pepita.comer(mijo,10)
+	assert.equals(150, pepita.energia())
+   "pepita come mijo seco"
+	assert.equals(150, pepita.energia())
+	mijo.secarse()
+	pepita.comer(mijo,10)
+	assert.equals(350,pepita.energia())	
+}
+
+test "salir a comer"{
+	pepita.comer(alpiste,10)
+	assert.equals(40, pepita.energia())
+	pepita.salirAComer()
+	assert.equals(330,pepita.energia())
+}
+	
+test "pepita come canelones sin nada"{
+	assert.equals(0, pepita.energia())
+	pepita.comer(canelones,1)
+	assert.equals(20, pepita.energia())
+	
+}	
+
+test "pepita come canelones solo con salsa"{
+	assert.equals(0, pepita.energia())
+	canelones.ponerSalsa()
+	pepita.comer(canelones,1)
+	assert.equals(25, pepita.energia())
+}	
+
+test "pepita come canelones solo con queso"{
+	assert.equals(0, pepita.energia())
+	canelones.ponerQueso()
+	canelones.ponerSalsa()
+	pepita.comer(canelones,1)
+	assert.equals(32, pepita.energia())
+}
+
+test "pepita come canelones con salsa y queso"{
+	assert.equals(0, pepita.energia())
+	canelones.ponerQueso()
+	pepita.comer(canelones,1)
+	assert.equals(27, pepita.energia())
 }
