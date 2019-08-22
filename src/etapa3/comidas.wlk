@@ -28,7 +28,7 @@ object sorgo {
 
 // despues, agregar mijo y canelones //
 
-object mijo{		// realizado 
+object mijo{		// realizado
 	var estadoMijo = false
 
 	
@@ -42,22 +42,6 @@ object mijo{		// realizado
 		else { return 20}
 	
 }	
-
-}
-// mijo visto en clase
-
-object mijo2{		// realizado
-	var energia = 0
-
-	
-	method mojarse() { energia = 15 }
-	
-	method secarse() { energia = 20 }
-	
-	method energiaPorGramo(){ return energia}
-
-
-
 }
 
 object canelones{ //realizado
