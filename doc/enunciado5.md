@@ -15,7 +15,7 @@ La energía revitalizadora que aporta depende de si se trata de temporada alta o
 **TIP**: se puede pensar que en temporada alta la energía que aporta es -20.	
 	
 **Cosas para pensar**: <br> 
-¿Quién tiene la responsabilidad de saber si Mar del Plata está en temporada alta o baja? ¿Cómo se cambia de temporada? 
+¿Quién tiene la responsabilidad de saber si Mar del Plata está en temporada alta o baja? ¿Cómo se cambia de temporada? // mar del plata
 	
 	
 ## Noroeste

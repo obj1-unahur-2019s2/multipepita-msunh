@@ -26,5 +26,9 @@ object roque {
 		
 		
 		
-	}  // implementar
+	}
+	
+		method pupiloActual(){
+		return pupilo
+	}
 }

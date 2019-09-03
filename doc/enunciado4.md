@@ -34,7 +34,7 @@ test "roque trabaja" {
 
 <br>
 
-## Pregunta final
+## Pregunta final 
 ¿Qué pasa si se hace?
 ```
 test "roque trabaja" {
@@ -44,5 +44,6 @@ test "roque trabaja" {
 }
 ```
 en particular, ¿se rompe algo? y ¿cómo queda afectada Pepita?
+resp: no se rompe, pepita obtiene el doble de su energia
 
 

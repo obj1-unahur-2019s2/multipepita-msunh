@@ -1,0 +1,67 @@
+import comidas.*
+import masAves.*
+import pepita.*
+import roque.*
+
+test "pepon come" {
+	
+pepon.comer(alpiste,20)
+assert.equals(40, pepon.energia())
+
+
+}
+
+test "pepon vuela 10 kms"{
+	
+	pepon.comer(alpiste,20)
+	assert.equals(40, pepon.energia())
+	pepon.volar(10)
+	assert.equals(34, pepon.energia())	
+	
+}
+
+test "pepon hace lo que quieras"{
+	
+	pepon.comer(alpiste,20)
+	assert.equals(40, pepon.energia())
+	
+	pepon.haceLoQueQuieras()
+    assert.equals(38.5, pepon.energia())
+	
+}
+
+test "pipa"{
+	
+	pipa.comer(alpiste,10)
+	assert.equals(10,pipa.gramosIngeridos())
+	pipa.comer(alpiste,80)
+	assert.equals(90,pipa.gramosIngeridos())
+	pipa.volar(500)
+	assert.equals(500,pipa.kmsRecorridos())
+	pipa.volar(50)
+	assert.equals(550,pipa.kmsRecorridos())
+
+	
+}
+
+test "roque trabaja"{
+	
+	roque.tuPupiloEs(pepita)
+	roque.entrenar()
+	assert.equals(1165, pepita.energia())
+
+	roque.tuPupiloEs(pipa)
+	roque.entrenar()
+	assert.equals(300, pipa.gramosIngeridos())
+	assert.equals(15, pipa.kmsRecorridos())
+
+	roque.tuPupiloEs(pepon)
+	roque.entrenar()
+
+	assert.equals(589, pepon.energia())	
+	
+	
+}
+
+
+

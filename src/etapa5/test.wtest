@@ -1,0 +1,42 @@
+import pepita.*
+import destinos.*
+import comidas.*
+
+
+test "pepita viaja a mardelplata en temporada alta" {
+
+	marDelPlata.temporadaBaja(false)
+	pepita.visitar(marDelPlata)
+	assert.equals(-20, pepita.energia())
+
+
+}
+
+test "pepita viaja a mardelplata en temporada baja" {
+	
+	marDelPlata.temporadaBaja(true)
+	pepita.visitar(marDelPlata)
+	assert.equals(80, pepita.energia())
+}
+
+test "pepita viaja a mardelplata2 en temporada alta y baja"{
+	
+	marDelPlata2.temporada("alta")
+	pepita.visitar(marDelPlata2)
+	assert.equals(-20, pepita.energia())
+	marDelPlata2.temporada("baja")
+	pepita.visitar(marDelPlata2)
+	assert.equals(60, pepita.energia())
+	
+}
+
+test "pepita viaja al noroeste"{
+	
+	
+	pepita.comer(alpiste,10)
+	assert.equals(40,pepita.energia())
+	pepita.visitar(noroeste)
+	assert.equals(44, pepita.energia())
+
+	
+}
